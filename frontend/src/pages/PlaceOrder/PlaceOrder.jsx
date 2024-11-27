@@ -1,6 +1,9 @@
 import React, { useEffect } from 'react'
 import "./PlaceOrder.css"
 import { StoreContext } from '../../context/StoreContext';
+import axios from "axios";
+import { useNavigate } from 'react-router-dom';
+
 
 const PlaceOrder = () => {
 
@@ -74,7 +77,7 @@ const PlaceOrder = () => {
           <input required name='state' onChange={onChangeHandler} value={data.state} type="text" placeholder='State'/>
         </div>
         <div className="multi-fields">
-          <input required name='zipcode' onChange={onChangeHandler} value={data.zipCode} type="text" placeholder='Zip Code'/>
+          <input  name='zipcode' onChange={onChangeHandler} value={data.zipCode} type="text" placeholder='Zip Code'/>
           <input required name='country' onChange={onChangeHandler} value={data.country} type="text" placeholder='Country'/>
         </div>
         <input required name='phone' onChange={onChangeHandler} value={data.phone} type="text" placeholder='Phone'/>
